@@ -1,0 +1,250 @@
+@use "./Variables/Variables.scss" as* ;
+
+
+* { 
+  font-family: $Main-Font-Family ;
+  margin: 0;
+  padding: 0 ;
+  letter-spacing: $Letter-Spacing;
+  p {
+    font-size: $Main-Font-Size;
+  }
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.attribution {
+  text-align: center; 
+  width: 50%;
+  margin: 0 auto;
+}
+
+.app {
+  width: 720px;
+  margin: auto auto;
+  display: flex;
+  box-shadow: 0 10px 20px 1px $Shadow-color;
+  -webkit-border-radius: $Main-Border-Radius ;
+  -moz-border-radius: $Main-Border-Radius ;
+  -ms-border-radius: $Main-Border-Radius ;
+  -o-border-radius: $Main-Border-Radius ;
+  border-radius: $Main-Border-Radius ;
+  
+  .resultBox {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(180deg, $Bg-Gradient-Top-Color, $Bg-Gradient-Bottom-Color);
+    -webkit-border-radius: $Main-Border-Radius ;
+    -moz-border-radius: $Main-Border-Radius ;
+    -ms-border-radius: $Main-Border-Radius ;
+    -o-border-radius: $Main-Border-Radius ;
+    border-radius: $Main-Border-Radius ;
+    
+    h3 {
+      color: $Light-Color;
+      font-weight: $Bold-Font-Weight;
+      margin-top: $Main-Top-Margin;
+    }
+    
+    .resultCount {
+      background: linear-gradient(180deg, $circle-Gradient-Top-Color, $circle-Gradient-Bottom-Color );
+      width: 180px;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      
+        h1 {
+          color: $Light-Color;
+          font-size: 60px;
+          position: relative;
+          
+            &::after {
+              content: " of 100";
+              font-size: 15px;
+              position: absolute;
+              bottom: -10px;
+              left: 50%;
+              color: $Light-lavender;
+              width: 50px;
+              font-weight: 300;
+              -webkit-transform: translate(-50%,0);
+              -moz-transform: translate(-50%,0);
+              -ms-transform: translate(-50%,0);
+              -o-transform: translate(-50%,0);
+              transform: translate(-50%,0);
+          }      
+        }
+    }
+    
+    .resultConclusion {
+      width: 80%;
+      margin-bottom: $Main-Bottom-Margin;
+      
+      h2 {
+        padding-top: 10px;
+        color: $Light-Color;
+        font-weight: $xxBold-Font-Weight;
+      }
+      p {
+        color: $Light-Color;
+        font-weight: $Slim-Font-Weight;
+        font-size: 15px;
+        padding: 20px 30px 0 30px;
+      }
+    }
+  } 
+  
+  .summaryBox {
+    width: 50%;
+    -webkit-border-radius: $Main-Border-Radius ;
+    -moz-border-radius: $Main-Border-Radius ;
+    -ms-border-radius: $Main-Border-Radius ;
+    -o-border-radius: $Main-Border-Radius ;
+    border-radius: $Main-Border-Radius ;
+    
+    .summaryContainer {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      
+      h3 {
+        margin-top: $Main-Top-Margin;
+        margin-bottom: 10px;
+      }
+      
+      .summaryScores{
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+        
+        .reaction {
+          background-color: hsla(0, 100%, 67%, 0.05) ;
+          .scoreName {
+            p {
+              color: hsla(0, 100%, 67%) ; 
+            }
+          }
+        } 
+        .memory {
+          background-color: hsl(39, 100%, 56%, 0.05) ;
+          .scoreName {
+            p {
+              color: hsl(39, 100%, 56%) ; 
+            }
+          }
+        } 
+        .verbal {
+          background-color: hsl(166, 100%, 37%, 0.05) ;
+          .scoreName {
+            p {
+              color: hsl(166, 100%, 37%) ; 
+            }
+          }
+        } 
+        .visual {
+          background-color: hsl(234, 85%, 45%, 0.05) ;
+          .scoreName {
+            p {
+              color: hsl(234, 85%, 45%) ; 
+            }
+          }
+        } 
+        
+        .score {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          padding: 15px;
+          margin: 10px 0;
+          box-sizing: border-box;
+          -webkit-border-radius: $Secondary-Border-Radius ;
+          -moz-border-radius: $Secondary-Border-Radius ;
+          -ms-border-radius: $Secondary-Border-Radius ;
+          -o-border-radius: $Secondary-Border-Radius ;
+          border-radius: $Secondary-Border-Radius ;
+          
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+          
+          .scoreName {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: $xBold-Font-Weight !important;
+            p {
+              margin-left: 15px;
+            }
+          }
+          
+          p {
+            font-weight: $xxBold-Font-Weight;
+            span {
+              color: rgba(0, 0, 0, 0.5);
+            }
+          }
+        }
+      }
+      
+      .continueButton {
+        background:  $Bg-Dark-Color;
+        color: $Light-Color;
+        text-align: center;
+        padding: 15px;
+        margin-bottom: $Main-Bottom-Margin ;
+        margin-top: 25px;
+        -webkit-border-radius: $Main-Border-Radius ;
+        -moz-border-radius: $Main-Border-Radius ;
+        -ms-border-radius: $Main-Border-Radius ;
+        -o-border-radius: $Main-Border-Radius ;
+        border-radius: $Main-Border-Radius ;
+        
+        &:hover {
+          background: linear-gradient(0deg, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+          cursor: pointer;
+}
+        
+      }
+      
+    }
+  }
+}
+
+
+@media (max-width: 720px) {
+  .app {
+    flex-direction: column;
+    width: 100%; 
+    
+    .resultBox, .summaryBox {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      width: 100%;
+    }
+    
+    h3 {
+      margin-bottom: 30px;
+    }
+    
+    .resultBox .resultConclusion {
+      p {
+        padding: 20px 10px 0 10px;
+      }
+    }
+  }}

@@ -1,0 +1,186 @@
+* {
+  font-family: "Hanken Grotesk", sans-serif;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+}
+* p {
+  font-size: 18px;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.attribution {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.app {
+  width: 720px;
+  margin: auto auto;
+  display: flex;
+  box-shadow: 0 10px 20px 1px hsl(221, 100%, 96%);
+  border-radius: 30px;
+}
+.app .resultBox {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(180deg, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  border-radius: 30px;
+}
+.app .resultBox h3 {
+  color: hsl(0, 0%, 100%);
+  font-weight: 500;
+  margin-top: 30px;
+}
+.app .resultBox .resultCount {
+  background: linear-gradient(180deg, hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
+  width: 180px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.app .resultBox .resultCount h1 {
+  color: hsl(0, 0%, 100%);
+  font-size: 60px;
+  position: relative;
+}
+.app .resultBox .resultCount h1::after {
+  content: " of 100";
+  font-size: 15px;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  color: hsl(241, 100%, 89%);
+  width: 50px;
+  font-weight: 300;
+  transform: translate(-50%, 0);
+}
+.app .resultBox .resultConclusion {
+  width: 80%;
+  margin-bottom: 50px;
+}
+.app .resultBox .resultConclusion h2 {
+  padding-top: 10px;
+  color: hsl(0, 0%, 100%);
+  font-weight: 800;
+}
+.app .resultBox .resultConclusion p {
+  color: hsl(0, 0%, 100%);
+  font-weight: 200;
+  font-size: 15px;
+  padding: 20px 30px 0 30px;
+}
+.app .summaryBox {
+  width: 50%;
+  border-radius: 30px;
+}
+.app .summaryBox .summaryContainer {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.app .summaryBox .summaryContainer h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.app .summaryBox .summaryContainer .summaryScores {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+.app .summaryBox .summaryContainer .summaryScores .reaction {
+  background-color: hsla(0, 100%, 67%, 0.05);
+}
+.app .summaryBox .summaryContainer .summaryScores .reaction .scoreName p {
+  color: hsl(0, 100%, 67%);
+}
+.app .summaryBox .summaryContainer .summaryScores .memory {
+  background-color: hsla(39, 100%, 56%, 0.05);
+}
+.app .summaryBox .summaryContainer .summaryScores .memory .scoreName p {
+  color: hsl(39, 100%, 56%);
+}
+.app .summaryBox .summaryContainer .summaryScores .verbal {
+  background-color: hsla(166, 100%, 37%, 0.05);
+}
+.app .summaryBox .summaryContainer .summaryScores .verbal .scoreName p {
+  color: hsl(166, 100%, 37%);
+}
+.app .summaryBox .summaryContainer .summaryScores .visual {
+  background-color: hsla(234, 85%, 45%, 0.05);
+}
+.app .summaryBox .summaryContainer .summaryScores .visual .scoreName p {
+  color: hsl(234, 85%, 45%);
+}
+.app .summaryBox .summaryContainer .summaryScores .score {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 15px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.app .summaryBox .summaryContainer .summaryScores .score:last-of-type {
+  margin-bottom: 0;
+}
+.app .summaryBox .summaryContainer .summaryScores .score .scoreName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700 !important;
+}
+.app .summaryBox .summaryContainer .summaryScores .score .scoreName p {
+  margin-left: 15px;
+}
+.app .summaryBox .summaryContainer .summaryScores .score p {
+  font-weight: 800;
+}
+.app .summaryBox .summaryContainer .summaryScores .score p span {
+  color: rgba(0, 0, 0, 0.5);
+}
+.app .summaryBox .summaryContainer .continueButton {
+  background: hsl(224, 30%, 27%);
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 50px;
+  margin-top: 25px;
+  border-radius: 30px;
+}
+.app .summaryBox .summaryContainer .continueButton:hover {
+  background: linear-gradient(0deg, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .app {
+    flex-direction: column;
+    width: 100%;
+  }
+  .app .resultBox, .app .summaryBox {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    width: 100%;
+  }
+  .app h3 {
+    margin-bottom: 30px;
+  }
+  .app .resultBox .resultConclusion p {
+    padding: 20px 10px 0 10px;
+  }
+}/*# sourceMappingURL=index.css.map */
