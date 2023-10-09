@@ -3,7 +3,7 @@ let resultText = document.querySelector("#result")
 let summaryArray = new Array()
 let result = 0
 async function summary() {
-  const response = await fetch('../data.json')
+  const response = await fetch('../results-summary-component-main/data.json')
   const data = await response.json()
   summaryArray = data
   
